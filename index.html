@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chính sách quyền riêng tư — TFT Trend</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    max-width: 44rem; margin: 0 auto; padding: 2rem 1.25rem 5rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  h1 { font-size: 1.6rem; line-height: 1.3; margin: 0 0 .25rem; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .5rem; }
+  p { margin: .75rem 0; }
+  code { font-size: .9em; padding: .1em .35em; border-radius: 4px; background: rgba(127,127,127,.18); }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .94rem; display: block; overflow-x: auto; }
+  th, td { text-align: left; vertical-align: top; padding: .5rem .6rem; border-bottom: 1px solid rgba(127,127,127,.3); }
+  th { font-weight: 600; }
+  ol { padding-left: 1.4rem; }
+  li { margin: .4rem 0; }
+</style>
+</head>
+<body>
+<h1>Chính sách quyền riêng tư — TFT Trend</h1>
+<p>Cập nhật: 16/09/2026</p>
+<p>TFT Trend là ứng dụng tra cứu số liệu meta Teamfight Tactics. Bản chất của nó là một bảng tra hiển thị đè lên màn hình. Nó <strong>không có tài khoản, không đăng nhập, không quảng cáo, không thống kê hành vi, không báo lỗi tự động</strong>.</p>
+<h2>Tóm gọn</h2>
+<p><strong>Ứng dụng không thu thập, không truyền và không bán bất kỳ dữ liệu cá nhân nào.</strong></p>
+<h2>Dữ liệu lưu trên máy bạn</h2>
+<p>Tất cả đều nằm trong bộ lưu trữ của ứng dụng trên chính thiết bị, và <strong>không bao giờ rời khỏi máy</strong>. Xoá ứng dụng là xoá sạch.</p>
+<table><thead><tr><th>khoá</th><th>nội dung</th></tr></thead><tbody><tr><td><code>tfttrend:tab</code></td><td>tab bạn mở lần cuối</td></tr><tr><td><code>tfttrend:pins</code></td><td>danh sách đội hình / tướng / trang bị bạn đã ghim</td></tr><tr><td><code>tfttrend:settings</code></td><td>tuỳ chọn hiển thị (chế độ gọn, cỡ chữ, phím tắt, URL meta tuỳ chọn)</td></tr><tr><td><code>tfttrend:pos</code>, <code>tfttrend:size</code></td><td>vị trí và kích thước của bong bóng và bảng</td></tr><tr><td><code>tfttrend:meta</code></td><td>bản sao số liệu meta để dùng được khi mất mạng</td></tr></tbody></table>
+<p>Không có mục nào trong đó là thông tin nhận dạng cá nhân.</p>
+<h2>Khi nào ứng dụng gọi mạng</h2>
+<p>Số liệu và toàn bộ hình ảnh đã được đóng gói sẵn trong ứng dụng, nên ở trạng thái mặc định ứng dụng <strong>chạy được hoàn toàn khi không có mạng</strong>. Chỉ có hai trường hợp phát sinh yêu cầu mạng:</p>
+<ol><li><strong>Thiếu một tệp hình cục bộ</strong> — ứng dụng tải hình đó từ <code>cdn.metatft.com</code>. Yêu cầu này chỉ gồm đường dẫn của hình, không kèm dữ liệu nào về bạn hay thiết bị.</li><li><strong>Bạn tự nhập một URL <code>meta.json</code></strong> trong tab Cài đặt — ứng dụng tải tệp đó về. Địa chỉ do bạn chọn; không nhập thì không có yêu cầu nào.</li></ol>
+<p>Ứng dụng không gửi thông tin về thiết bị, vị trí, danh bạ, ảnh, hay lịch sử sử dụng tới bất kỳ nơi nào.</p>
+<h2>Quyền ứng dụng xin, và vì sao</h2>
+<p><strong>Android</strong></p>
+<table><thead><tr><th>quyền</th><th>dùng để làm gì</th></tr></thead><tbody><tr><td><code>SYSTEM_ALERT_WINDOW</code></td><td>vẽ bong bóng và bảng tra lên trên màn hình. Bạn phải tự cấp trong Cài đặt hệ thống</td></tr><tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>giữ bong bóng sống khi bạn đang ở trong game</td></tr><tr><td><code>POST_NOTIFICATIONS</code></td><td>hiện thông báo thường trú của service đó, theo yêu cầu của Android</td></tr><tr><td><code>INTERNET</code></td><td>đúng hai trường hợp ở mục trên</td></tr></tbody></table>
+<p><strong>iOS</strong> — không xin quyền nào.</p>
+<p>Ứng dụng <strong>không</strong> xin quyền truy cập vị trí, danh bạ, ảnh, micro, camera, hay thông tin thiết bị.</p>
+<h2>Điều ứng dụng cố tình không làm</h2>
+<p>TFT Trend chỉ vẽ cửa sổ của chính nó lên trên màn hình. Nó <strong>không đọc bộ nhớ game, không chèn mã vào tiến trình game, không tự động hoá thao tác, không chụp hay phân tích màn hình</strong>. Đây là giới hạn thiết kế, không phải tính năng chưa làm.</p>
+<h2>Trẻ em</h2>
+<p>Ứng dụng không thu thập dữ liệu nào, nên cũng không thu thập dữ liệu của trẻ em.</p>
+<h2>Nguồn dữ liệu và bản quyền</h2>
+<p>Số liệu xếp hạng lấy từ <strong>MetaTFT</strong>. Tên và hình ảnh tướng, trang bị, lõi thăng tiến thuộc bản quyền <strong>Riot Games</strong>.</p>
+<p>TFT Trend không do Riot Games tạo ra, tài trợ hay xác nhận. Teamfight Tactics và Riot Games là thương hiệu hoặc thương hiệu đã đăng ký của Riot Games, Inc.</p>
+<h2>Thay đổi chính sách</h2>
+<p>Chính sách này sẽ được cập nhật nếu hành vi của ứng dụng thay đổi. Ngày cập nhật ghi ở đầu trang.</p>
+<h2>Liên hệ</h2>
+<p>Email: casto.support@gmail.com</p>
+</body>
+</html>
